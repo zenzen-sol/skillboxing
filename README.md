@@ -100,6 +100,8 @@ brain/
 
 Files are short (under 50 lines), scannable (bullets over prose), and connected (wikilinks like `[[open-questions]]` link related files). The index rebuilds itself automatically.
 
+The brain folder is also browseable as an [Obsidian](https://obsidian.md) vault — just open the `brain/` directory in Obsidian to get a linked graph of your project knowledge.
+
 ## Plugin structure
 
 ```
@@ -119,6 +121,10 @@ skillboxing/
         └── scripts/
             └── snapshot.sh      # Concatenate brain files for review
 ```
+
+## Acknowledgments
+
+Inspired by [brainmaxxing](https://github.com/poteto/brainmaxxing) by [@poteto](https://github.com/poteto), a persistent memory system for Claude Code. Skillboxing adapts the brain vault concept for general knowledge work in CoWork.
 
 ## License
 
