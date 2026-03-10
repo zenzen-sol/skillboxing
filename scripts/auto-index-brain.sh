@@ -4,11 +4,17 @@
 
 set -euo pipefail
 
-BRAIN_DIR="$CLAUDE_PROJECT_DIR/brain"
+BRAIN_DIR="brain"
 INDEX="$BRAIN_DIR/index.md"
 
-# Collect all .md files except index.md itself
+# Nothing to index if no brain dir
+[ -d "$BRAIN_DIR" ] || exit 0
+
+# Collect all .md files except index.md
 mapfile -t FILES < <(find "$BRAIN_DIR" -name '*.md' ! -name 'index.md' -type f | sort)
+
+# Nothing to index
+[ ${#FILES[@]} -gt 0 ] || exit 0
 
 # Collect current wikilinks from index
 CURRENT_LINKS=""
@@ -19,13 +25,12 @@ fi
 # Build expected links
 EXPECTED_LINKS=""
 for f in "${FILES[@]}"; do
-  # Strip brain dir prefix and .md extension
   rel="${f#$BRAIN_DIR/}"
   rel="${rel%.md}"
   EXPECTED_LINKS+="[[$rel]]"$'\n'
 done
 
-# Compare — rebuild if drift detected
+# No drift — nothing to do
 if [ "$CURRENT_LINKS" = "$EXPECTED_LINKS" ]; then
   exit 0
 fi
@@ -40,14 +45,12 @@ fi
     rel="${f#$BRAIN_DIR/}"
     rel="${rel%.md}"
 
-    # Determine section from first path component
     if [[ "$rel" == */* ]]; then
       section="${rel%%/*}"
     else
-      section="root"
+      section="general"
     fi
 
-    # Print section header on change
     if [ "$section" != "$prev_section" ]; then
       section_title="$(echo "$section" | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')"
       echo ""

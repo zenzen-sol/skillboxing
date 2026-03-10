@@ -1,0 +1,24 @@
+{
+  "hooks": [
+    {
+      "event": "SessionStart",
+      "matcher": "startup|resume",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "${CLAUDE_PLUGIN_ROOT}/scripts/inject-brain.sh"
+        }
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "matcher": "brain/",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "${CLAUDE_PLUGIN_ROOT}/scripts/auto-index-brain.sh"
+        }
+      ]
+    }
+  ]
+}
