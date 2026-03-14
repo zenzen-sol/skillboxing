@@ -8,9 +8,9 @@ Every time you start a new Claude session on a project, you lose context. You re
 
 ## What skillboxing does
 
-Skillboxing gives your project a memory. It creates and maintains a `brain/` folder — a collection of short markdown files that capture the important stuff: decisions, key facts, open questions, preferences, and anything else someone would need to know.
+Skillboxing gives your project a memory. It creates and maintains a collection of short markdown files that capture decisions, key facts, open questions, preferences, and other useful project information. At the start of each session, Claude reads the brain to ensure continuity across sessions.
 
-At the start of every session, Claude reads the brain. As you work, it stays in sync. The result: your second session on a project starts where the first one left off. And anyone who opens the project can say "review the brain" and be caught up in seconds.
+Anyone who opens the project can say "Review the brain and summarize where things stand". Both human teammates and AI agents can be brought up to speed in seconds. It's also great if you do a lot of context switching and need a reminder about where you left off on a project.
 
 ## Install
 
