@@ -4,10 +4,5 @@
   "description": "Persistent project memory for Claude. Maintains a brain/ folder that captures what matters across sessions.",
   "author": {
     "name": "zenzen-sol"
-  },
-  "repository": "https://github.com/zenzen-sol/skillboxing",
-  "license": "MIT",
-  "keywords": ["memory", "knowledge", "brain", "cowork", "projects"],
-  "skills": "./skills/",
-  "hooks": "./hooks/hooks.json"
+  }
 }

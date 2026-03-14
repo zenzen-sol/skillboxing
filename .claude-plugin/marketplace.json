@@ -1,0 +1,11 @@
+{
+  "name": "skillboxing",
+  "owner": { "name": "zenzen-sol" },
+  "plugins": [
+    {
+      "name": "skillboxing",
+      "source": "./skillboxing",
+      "description": "Persistent project memory for Claude. Maintains a brain/ folder that captures what matters across sessions."
+    }
+  ]
+}

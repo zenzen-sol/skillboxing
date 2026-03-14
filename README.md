@@ -14,12 +14,16 @@ At the start of every session, Claude reads the brain. As you work, it stays in 
 
 ## Install
 
+Tell Claude:
+
+> Install the skillboxing plugin from https://github.com/zenzen-sol/skillboxing
+
+Or install manually from the CLI:
+
 ```bash
 claude plugin marketplace add zenzen-sol/skillboxing
 claude plugin install skillboxing
 ```
-
-Or install from the CoWork plugin browser.
 
 ## Usage
 
