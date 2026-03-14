@@ -43,7 +43,7 @@ Start `index.md` with `# Brain` and build it as you add files.
    - Use wikilinks `[[file-name]]` to connect related files
    - Organize into subdirectories when a category has 3+ files
 
-5. **Update `brain/index.md`** with wikilinks to any new files
+5. **Update `brain/index.md`** with wikilinks to any new files, including a brief description after each link (e.g., `[[analysis/owner-servicer-framing]] — Unified theory resolving silent participant vs. receivables purchaser tension`). Descriptions help humans scanning the brain in Obsidian. Keep them to one phrase.
 
 6. **Report** what was added, updated, or removed, with a one-line rationale for each
 

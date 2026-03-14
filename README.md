@@ -14,8 +14,9 @@ At the start of every session, Claude reads the brain. As you work, it stays in 
 
 ## Install
 
-```
-claude plugin install skillboxing@skillboxing
+```bash
+claude plugin marketplace add zenzen-sol/skillboxing
+claude plugin install skillboxing
 ```
 
 Or install from the CoWork plugin browser.
@@ -124,7 +125,7 @@ skillboxing/
 
 ## Acknowledgments
 
-Inspired by [brainmaxxing](https://github.com/poteto/brainmaxxing) by [@poteto](https://github.com/poteto), a persistent memory system for Claude Code. Skillboxing adapts the brain vault concept for general knowledge work in CoWork.
+Inspired by [brainmaxxing](https://github.com/poteto/brainmaxxing) by [@poteto](https://github.com/poteto), a persistent memory system for Claude Code. Skillboxing adapts the brain vault concept for general knowledge work in CoWork. If you write code, use brainmaxxing!
 
 ## License
 

@@ -25,28 +25,16 @@ Audit the project's `brain/` folder for quality and coherence.
    - Files that should be merged (overlapping topics)
    - Files that should be split (covering too much)
 
-4. **Present findings** before making changes:
-   ```
-   Meditate — proposed changes:
+4. **Present findings** before making changes. Group by action type — deletions, merges, tightening, gaps, orphans — with a one-line rationale for each. Example:
 
-   Delete:
-     brain/initial-timeline.md — superseded by brain/revised-timeline.md
+   > **Delete:** `brain/initial-timeline.md` — superseded by `brain/revised-timeline.md`
+   > **Merge:** `brain/vendor-a-notes.md` + `brain/vendor-b-notes.md` → `brain/vendor-comparison.md`
+   > **Tighten:** `brain/project-context.md` — 3 paragraphs can be reduced to 6 bullets
+   > **Gap:** No record of budget constraints discussed last week
+   > **Orphan:** `brain/meeting-notes-jan.md` — not linked from index
 
-   Merge:
-     brain/vendor-a-notes.md + brain/vendor-b-notes.md → brain/vendor-comparison.md
+   Ask the user to confirm before applying any changes
 
-   Tighten:
-     brain/project-context.md — 3 paragraphs can be reduced to 6 bullets
-
-   Gaps:
-     No record of the budget constraints discussed last week
-
-   Orphans:
-     brain/meeting-notes-jan.md — not linked from index
-
-   Apply these changes? (y/n)
-   ```
-
-5. **Apply** only after user approval
+5. **Apply** approved changes only
 
 6. **Rebuild `brain/index.md`** to reflect the current state
