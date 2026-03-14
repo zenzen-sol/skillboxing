@@ -1,24 +1,26 @@
 {
-  "hooks": [
-    {
-      "event": "SessionStart",
-      "matcher": "startup|resume",
-      "hooks": [
-        {
-          "type": "command",
-          "command": "${CLAUDE_PLUGIN_ROOT}/scripts/inject-brain.sh"
-        }
-      ]
-    },
-    {
-      "event": "PostToolUse",
-      "matcher": "brain/",
-      "hooks": [
-        {
-          "type": "command",
-          "command": "${CLAUDE_PLUGIN_ROOT}/scripts/auto-index-brain.sh"
-        }
-      ]
-    }
-  ]
+  "description": "Loads brain index at session start and keeps it in sync when brain files change",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/inject-brain.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/auto-index-brain.sh"
+          }
+        ],
+        "matcher": "brain/"
+      }
+    ]
+  }
 }

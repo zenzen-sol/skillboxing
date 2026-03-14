@@ -1,6 +1,6 @@
 {
   "name": "skillboxing",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Persistent project memory for Claude. Maintains a brain/ folder that captures what matters across sessions.",
   "author": {
     "name": "zenzen-sol"

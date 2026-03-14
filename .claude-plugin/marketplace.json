@@ -1,6 +1,9 @@
 {
   "name": "skillboxing",
-  "owner": { "name": "zenzen-sol" },
+  "metadata": {
+    "description": "Persistent learning system for knowledge work in Claude CoWork."
+  },
+  "owner": { "name": "Sol Irvine" },
   "plugins": [
     {
       "name": "skillboxing",
